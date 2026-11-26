@@ -1,0 +1,6 @@
+extension.js
+prefs.js
+lib/indicator.js
+lib/lyricsFetcher.js
+lib/playerManager.js
+lib/utils.js

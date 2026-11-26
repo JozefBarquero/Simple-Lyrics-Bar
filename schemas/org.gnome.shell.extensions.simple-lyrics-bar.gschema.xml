@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="simple-lyrics-bar">
+  <schema id="org.gnome.shell.extensions.simple-lyrics-bar"
+    path="/org/gnome/shell/extensions/simple-lyrics-bar/">
+
+    <key name="panel-position" type="s">
+      <choices>
+        <choice value="left" />
+        <choice value="center" />
+        <choice value="right" />
+      </choices>
+      <default>'center'</default>
+      <summary>Panel position</summary>
+      <description>Where to place the lyrics indicator in the top panel.</description>
+    </key>
+
+    <key name="show-idle-text" type="b">
+      <default>false</default>
+      <summary>Show text when idle</summary>
+      <description>Whether to show a custom message when no song is playing.</description>
+    </key>
+
+    <key name="idle-text" type="s">
+      <default>''</default>
+      <summary>Idle text</summary>
+      <description>Custom text to display when no song is playing. Leave empty for the default localized message.</description>
+    </key>
+
+    <key name="show-no-lyrics-text" type="b">
+      <default>false</default>
+      <summary>Show text when no lyrics</summary>
+      <description>Whether to show a custom message when lyrics are not available.</description>
+    </key>
+
+    <key name="no-lyrics-text" type="s">
+      <default>''</default>
+      <summary>No lyrics text</summary>
+      <description>Custom text to display when lyrics are not available for the current song. Leave empty for the default localized message.</description>
+    </key>
+
+  </schema>
+</schemalist>

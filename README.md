@@ -1,57 +1,54 @@
 # Simple Lyrics Bar
 
-Extensión minimalista para GNOME Shell que muestra la línea de letra sincronizada en tiempo real directamente en la barra superior.
+Minimalist extension for GNOME Shell that displays the synchronized lyric line in real time directly on the top bar.
 
-## Características
+## Features
 
-- Visualización exclusiva del texto de la letra actual.
-- Detección automática del reproductor mediante la interfaz MPRIS.
-- Obtención de letras sincronizadas mediante la API de LRCLIB.
-- Sincronización temporal interna con reloj monótono para evitar saturación de D-Bus.
-- Panel de preferencias con Libadwaita para ajustar posición y textos alternativos.
-- Código nativo en JavaScript para GNOME (GJS / ESM) sin dependencias adicionales.
+- Exclusive display of the current lyric text.
+- Automatic player detection via the MPRIS interface.
+- Retrieval of synchronized lyrics through the LRCLIB API.
+- Internal time synchronization with a monotonic clock to avoid D-Bus saturation.
+- Preferences panel with Libadwaita to adjust position and alternative texts.
+- Native JavaScript code for GNOME (GJS / ESM) with no additional dependencies.
 
-## Requisitos
+## Requirements
 
-- GNOME Shell 50 o 51.
-- Reproductor multimedia con soporte para MPRIS en Linux.
+- GNOME Shell 50 or 51.
+- Media player with MPRIS support on Linux.
 
-## Versiones de GNOME Testeadas
+## Tested GNOME Versions
 
-| Versión de GNOME | Testeada |
+| GNOME Version | Tested |
 | :--- | :--- |
-| 51 | Sí |
-| 50 | Sí |
+| 51 | Yes |
+| 50 | Yes |
 
-## Instalación y empaquetado
+## Installation and Packaging
 
-### Empaquetado oficial
+### Official packaging
 
-```bash
-gnome-extensions pack \
-        --force \
-        --extra-source=lib \
-        --schema=schemas/org.gnome.shell.extensions.simple-lyrics-bar.gschema.xml \
-        --podir=po \
-        .
-```
+    gnome-extensions pack \
+            --force \
+            --extra-source=lib \
+            --schema=schemas/org.gnome.shell.extensions.simple-lyrics-bar.gschema.xml \
+            --podir=po \
+            .
 
-### Instalación manual desde el paquete generado
-```bash
-gnome-extensions install --force simple-lyrics-bar@blunnix.com.shell-extension.zip
-gnome-extensions enable simple-lyrics-bar@blunnix.com
-```
+### Manual installation from the generated package
 
-Opciones disponibles:
-- **Posición**: Ubicación del texto en el panel (Izquierdo, Centro o Derecha).
-- **Sin reproducción**: Opción para mostrar u ocultar un mensaje cuando no hay música activa.
-- **Letra no disponible**: Mensaje a mostrar si la pista no cuenta con letra sincronizada.
+    gnome-extensions install --force simple-lyrics-bar@blunnix.com.shell-extension.zip
+    gnome-extensions enable simple-lyrics-bar@blunnix.com
 
-## Privacidad
+Available options:
+- **Position**: Location of the text on the panel (Left, Center, or Right).
+- **No playback**: Option to show or hide a message when there is no active music.
+- **Lyrics unavailable**: Message to display if the track does not have synchronized lyrics.
 
-La extensión no recolecta datos personales. Únicamente transmite a LRCLIB el título, artista y duración reportados por el reproductor para solicitar la letra correspondiente.
+## Privacy
 
-## Créditos y Licencia
+The extension does not collect personal data. It only transmits the title, artist, and duration reported by the player to LRCLIB in order to request the corresponding lyrics.
 
-- Letras provistas por el servicio de LRCLIB.
-- Distribuido bajo los términos de la Licencia Pública General de GNU v3.0 (GPL-3.0-or-later)
+## Credits and License
+
+- Lyrics provided by the LRCLIB service.
+- Distributed under the terms of the GNU General Public License v3.0 (GPL-3.0-or-later).

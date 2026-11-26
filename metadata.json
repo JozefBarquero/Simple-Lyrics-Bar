@@ -1,0 +1,12 @@
+{
+  "name": "Simple Lyrics Bar",
+  "description": "Shows the current synced lyric line from LRCLIB in the top panel via MPRIS.",
+  "uuid": "simple-lyrics-bar@blunnix.com",
+  "gettext-domain": "simple-lyrics-bar",
+  "settings-schema": "org.gnome.shell.extensions.simple-lyrics-bar",
+  "shell-version": [
+    "50",
+    "51"
+  ],
+  "url": "https://github.com/JozefBarquero/Simple-Lyrics-Bar"
+}
